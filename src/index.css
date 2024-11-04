@@ -1,0 +1,11 @@
+:root{
+    font-family: "Open Sans", sans-serif;
+
+    --clr-bg : #dfdacc;
+    --clr-txt: #2c2b26;
+}
+
+.darkmode {
+    --clr-bg : #2c2b26;
+    --clr-txt : #dfdacc;
+}
