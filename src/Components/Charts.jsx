@@ -23,15 +23,22 @@ ChartJS.register(
 const ChartComponent = ({ data }) => {
   const labels = data.slice(1).map(row => row[0]);         // X-axis labels
   const values = data.slice(1).map(row => parseInt(row[1])); // Y-axis values
-
+  const svalue = data.slice(1).map(row => parseInt(row[2]));
   const chartData = {
     labels,
     datasets: [
       {
-        label: 'Sample Data',
+        label: 'Games Played',
         data: values,
         backgroundColor: '#06D6A0',
         borderColor: '#048A81',
+        borderWidth: 1,
+      },
+      {
+        label: 'Wins',
+        data: svalue,
+        backgroundColor: 'yellow',
+        borderColor: 'red',
         borderWidth: 1,
       },
     ],
@@ -45,7 +52,7 @@ const ChartComponent = ({ data }) => {
       },
       title: {
         display: true,
-        text: 'Sample Data Chart',
+        text: 'MoreSideMen AmongUs Data',
       },
     },
   };
